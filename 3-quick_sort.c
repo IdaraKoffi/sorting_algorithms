@@ -47,8 +47,8 @@ void _qsort(int *a, int low, int high, int size)
 		if (k != j && a[k] != a[j])
 		{
 			tmp = a[k];
-			a[w] = a[j];
-			a[p] = tmp;
+			a[k] = a[j];
+			a[j] = tmp;
 			print_array(a, size);
 		}
 		_qsort(a, low, k - 1, size);
